@@ -7,7 +7,7 @@ declare const window: any;
 export const ERR_CORDOVA_NOT_AVAILABLE = { error: 'cordova_not_available' };
 export const ERR_PLUGIN_NOT_INSTALLED = { error: 'plugin_not_installed' };
 
-export function getPromise<T>(callback: (resolve: Function, reject?: Function) => any): Promise<T> {
+export function getPromise<T>(callback: (resolve: Function, reject?: Function) => any): Promise<any> {
   const tryNativePromise = () => {
     if (Promise) {
       return new Promise<T>((resolve, reject) => {
